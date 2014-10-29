@@ -5,15 +5,6 @@
             <version>1.0.0</version>
         </SM_Bestseller>
     </modules>
-    <frontend>
-        <layout>
-            <updates>
-                <sm_bestseller>
-                    <file>sm_bestseller.xml</file>
-                </sm_bestseller>
-            </updates>
-        </layout>
-    </frontend>
     <global>
         <blocks>
             <sm_bestseller>

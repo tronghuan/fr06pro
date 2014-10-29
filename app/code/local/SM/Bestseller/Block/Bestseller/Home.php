@@ -4,7 +4,24 @@
 */
 class SM_Bestseller_Block_Bestseller_Home 
 	extends Mage_Catalog_Block_Product_Abstract
+    implements Mage_Widget_Block_Interface
 {
+    protected $_serializer = null;
+
+    /**
+     * Initialization
+     */
+    protected function _construct()
+    {
+        $this->_serializer = new Varien_Object();
+        parent::_construct();
+    }
+
+    protected function _toHtml(){
+        $list = $this->getBestsellerProducts();
+        $this->assign('list', $list);
+        return parent::_toHtml();
+    }
 
 	public function getBestsellerProducts()	
 	{
