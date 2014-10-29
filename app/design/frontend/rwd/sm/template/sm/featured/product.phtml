@@ -1,4 +1,4 @@
-<?php if (($_products = $this->getProductCollection()) && $_products->getSize()): ?>
+<?php if (($list) && $list->getSize()): ?>
     <h2 class="subtitle"><?php echo $this->__('Featured product') ?></h2>
     <div class="swiper-featured-container swiper-container">
         <a class="arrow-left" href="#"><i class="fa fa-arrow-left"></i>
@@ -6,7 +6,7 @@
         <a class="arrow-right" href="#"><i class="fa fa-arrow-right"></i>
         </a>
         <div class="swiper-wrapper">
-            <?php foreach ($_products->getItems() as $_product): ?>
+            <?php foreach ($list->getItems() as $_product): ?>
                 <div class="swiper-slide">
                     <div class="swiper-slider-inner">
                         <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->escapeHtml($_product->getName()) ?>" class="product-image">

@@ -1,14 +1,21 @@
 <?php
-class SM_Featured_Block_Product extends Mage_Catalog_Block_Product_Abstract
+class SM_Featured_Block_Product extends Mage_Catalog_Block_Product_Abstract implements Mage_Widget_Block_Interface
 {
+    protected $_serializer = null;
     const DEFAULT_PRODUCTS_COUNT = 15;
     public function _construct()
     {
+        $this->_serializer = new Varien_Object();
         parent::_construct();
         if ($numberProduct = Mage::getStoreConfig('sm_featured/general/number_product'))
         {
             $this->setProductsCount($numberProduct);
         }
+    }
+    protected function _toHtml(){
+        $list = $this->_getProductCollection();
+        $this->assign('list', $list);
+        return parent::_toHtml();
     }
     protected function _getProductCollection()
     {

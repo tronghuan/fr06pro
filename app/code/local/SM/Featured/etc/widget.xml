@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<widgets>
+    <sm_featured type="sm_featured/product" translate="name description" module="sm_featured">
+        <name>Featured</name>
+        <description>Chon vi tri hien thi Featured</description>
+        <parameters>
+            <template translate="label">
+                <label>Featured Template</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>select</type>
+                <values>
+                    <featured translate="label">
+                        <value>sm/featured/product.phtml</value>
+                        <label>Featured phtml</label>
+                    </featured>
+                </values>
+            </template>
+        </parameters>
+    </sm_featured>
+</widgets> 

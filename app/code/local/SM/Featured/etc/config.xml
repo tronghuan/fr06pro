@@ -5,15 +5,7 @@
             <version>1.0.0</version>
         </SM_Featured>
     </modules>
-    <frontend>
-        <layout>
-            <updates>
-                <sm_featured module="sm_featured">
-                    <file>sm_featured.xml</file>
-                </sm_featured>
-            </updates>
-        </layout>
-    </frontend>
+
     <global>
         <blocks>
             <sm_featured>
